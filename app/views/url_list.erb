@@ -1,0 +1,10 @@
+<div class ="container">
+<h2>YOUR PAST SHORTENED LINKS:</h2>
+
+<p><% Url.all.each do |x| %>
+  <ul><a href="/<%= x.short_url %>">
+    <li><%= 'http://localhost:9393/'+x.short_url %></li>
+  </a></ul>
+  <%end%>
+</p>
+</div>
