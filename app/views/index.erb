@@ -1,23 +1,13 @@
 <div class="container">
 
-<h1>Bitly</h1>
+<h1>Examination = Torture</h1>
 
-<p><i>Welcome to Bitly!</i></p>
+<p><i>Welcome to D-Day!</i></p>
 <br>
-<h2>SHORTEN YOUR LINK HERE:</h2>
+<h2>What would you like to do?</h2>
 
-<form action='/urls' method='post'>
-<input area="text" name="url[long_url]" placeholder="Paste a link to shorten it">
-<br>
-<br>
-<input type="submit" value="Submit!">
-<br>
-</form>
+  <a href = "/sign_in">Sign In</a>
+  <a href = "/create_account">Create an Account</a>
+  <a href = "/url_list">Proceed without Sign In</a>
 
 </div>
-
-<p align="center"><% if @url %>
-  <% if @url.errors %>
-    <%= @url.errors.full_messages %>
-<% end %>
-<% end %></p>

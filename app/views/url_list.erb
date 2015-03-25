@@ -1,10 +1,21 @@
 <div class ="container">
 <h2>YOUR PAST SHORTENED LINKS:</h2>
 
-<p><% Url.all.each do |x| %>
-  <ul><a href="/<%= x.short_url %>">
+<p><% @user = User.find_by_email(email) %>
+   <% if @user.password = password %>
+   <% Url.where(user_id: @user.id).each do |x| %>
+       <ul><a href="/<%= x.short_url %>">
+        <li><%= 'http://localhost:9393/'+x.short_url %></li>
+      </a></ul>
+   <% else%>
+  <% Url.where(user_id: 'nil').each do |x| %>
+   <ul><a href="/<%= x.short_url %>">
     <li><%= 'http://localhost:9393/'+x.short_url %></li>
   </a></ul>
-  <%end%>
-</p>
+
+  <a href = "/sign_out">Sign out</a>
+  <a href = "/shorten_url">Shorten your URL here!</a>
+
 </div>
+
+
